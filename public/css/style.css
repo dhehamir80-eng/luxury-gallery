@@ -1,0 +1,2662 @@
+/* ===========================================================
+   STYLE.CSS
+   بخش ۱ از ۱۰
+=========================================================== */
+
+@import url("variables.css");
+@import url("animations.css");
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:var(--font-family);
+
+    background:var(--background);
+
+    color:var(--text);
+
+    direction:rtl;
+
+    overflow-x:hidden;
+
+    line-height:1.8;
+
+}
+
+img{
+
+    display:block;
+
+    width:100%;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+input,
+select,
+textarea{
+
+    border:none;
+
+    outline:none;
+
+    font-family:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+section{
+
+    padding:100px 0;
+
+}
+
+.container{
+
+    width:100%;
+
+    max-width:var(--container);
+
+    margin:auto;
+
+    padding-inline:20px;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eef1f5;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--secondary);
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--secondary-hover);
+
+}
+
+/* ===========================
+   LOADER
+=========================== */
+
+.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:99999;
+
+    transition:.4s;
+
+}
+
+.loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+.loader-circle{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    border:6px solid #dbe3ec;
+
+    border-top:6px solid var(--secondary);
+
+    animation:rotate360 1s linear infinite;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    right:0;
+
+    width:100%;
+
+    height:var(--header-height);
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    z-index:1000;
+
+    transition:var(--transition);
+
+}
+
+.header.shadow{
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.header-scroll{
+
+    background:#ffffff;
+
+}
+
+.header .container{
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:800;
+
+    color:var(--primary);
+
+    letter-spacing:.5px;
+
+}
+
+.logo span{
+
+    color:var(--secondary);
+
+}
+
+/* ===========================
+   DESKTOP MENU
+=========================== */
+
+.desktop-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+.desktop-menu a{
+
+    font-size:15px;
+
+    color:var(--text);
+
+    position:relative;
+
+    transition:var(--transition);
+
+}
+
+.desktop-menu a:hover{
+
+    color:var(--secondary);
+
+}
+
+.desktop-menu a.active{
+
+    color:var(--secondary);
+
+}
+
+.desktop-menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-8px;
+
+    right:0;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--secondary);
+
+    transition:.35s;
+
+}
+
+.desktop-menu a:hover::after,
+
+.desktop-menu a.active::after{
+
+    width:100%;
+
+}
+
+/* ===========================
+   HEADER BUTTON
+=========================== */
+
+.header-action{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+/* ===========================================================
+   STYLE.CSS
+   بخش ۲ از ۱۰
+=========================================================== */
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:14px 28px;
+
+    border-radius:var(--radius-full);
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.btn-primary{
+
+    background:var(--secondary);
+
+    color:var(--white);
+
+    box-shadow:0 12px 30px rgba(37,99,235,.25);
+
+}
+
+.btn-primary:hover{
+
+    background:var(--secondary-hover);
+
+    transform:translateY(-3px);
+
+}
+
+.btn-outline{
+
+    background:transparent;
+
+    border:2px solid var(--secondary);
+
+    color:var(--secondary);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--secondary);
+
+    color:var(--white);
+
+}
+
+/* ===========================
+   MOBILE MENU BUTTON
+=========================== */
+
+.mobile-menu-button{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:14px;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#f3f4f6;
+
+    color:var(--primary);
+
+    font-size:24px;
+
+}
+
+/* ===========================
+   MOBILE MENU
+=========================== */
+
+.mobile-menu{
+
+    position:fixed;
+
+    top:0;
+
+    right:-340px;
+
+    width:320px;
+
+    height:100vh;
+
+    background:#fff;
+
+    z-index:9999;
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:30px;
+
+    box-shadow:-10px 0 30px rgba(0,0,0,.08);
+
+}
+
+.mobile-menu.active{
+
+    right:0;
+
+}
+
+.mobile-menu-close{
+
+    width:44px;
+
+    height:44px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:#f3f4f6;
+
+    margin-bottom:40px;
+
+    font-size:22px;
+
+}
+
+.mobile-menu nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.mobile-menu nav a{
+
+    padding:14px;
+
+    border-radius:14px;
+
+    transition:var(--transition);
+
+    color:var(--text);
+
+}
+
+.mobile-menu nav a:hover,
+
+.mobile-menu nav a.active{
+
+    background:var(--secondary);
+
+    color:#fff;
+
+}
+
+/* ===========================
+   OVERLAY
+=========================== */
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:9998;
+
+}
+
+.overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    padding-top:150px;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #f8fbff,
+        #eef4ff
+    );
+
+}
+
+.hero-content{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+.hero-title{
+
+    font-size:52px;
+
+    line-height:1.4;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+    font-weight:800;
+
+}
+
+.hero-title span{
+
+    color:var(--secondary);
+
+}
+
+.hero-subtitle{
+
+    font-size:18px;
+
+    color:var(--text-light);
+
+    margin-bottom:35px;
+
+    max-width:650px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-image{
+
+    position:relative;
+
+}
+
+.hero-image img{
+
+    border-radius:30px;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.12);
+
+}
+
+.hero-badge{
+
+    position:absolute;
+
+    bottom:25px;
+
+    left:25px;
+
+    background:#fff;
+
+    padding:16px 20px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+/* ===========================================================
+   STYLE.CSS
+   بخش ۳ از ۱۰
+=========================================================== */
+
+/* ===========================
+   SECTION HEADER
+=========================== */
+
+.section-header{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title{
+
+    font-size:40px;
+
+    font-weight:800;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+    line-height:1.4;
+
+}
+
+.section-title span{
+
+    color:var(--secondary);
+
+}
+
+.section-description{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:var(--text-light);
+
+    font-size:16px;
+
+    line-height:2;
+
+}
+
+/* ===========================
+   SEARCH BOX
+=========================== */
+
+.search-wrapper{
+
+    margin-top:-60px;
+
+    position:relative;
+
+    z-index:20;
+
+}
+
+.search-box{
+
+    background:#ffffff;
+
+    border-radius:26px;
+
+    padding:25px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:center;
+
+}
+
+.search-box input,
+
+.search-box select{
+
+    flex:1;
+
+    height:58px;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:0 18px;
+
+    background:#fff;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.search-box input:focus,
+
+.search-box select:focus{
+
+    border-color:var(--secondary);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+.search-box button{
+
+    height:58px;
+
+    padding:0 34px;
+
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.properties-grid,
+
+.cars-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    position:relative;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.card-image{
+
+    position:relative;
+
+    height:260px;
+
+    overflow:hidden;
+
+}
+
+.card-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.card:hover .card-image img{
+
+    transform:scale(1.08);
+
+}
+
+.card-category{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:var(--secondary);
+
+    color:#fff;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    z-index:2;
+
+}
+
+.card-body{
+
+    padding:24px;
+
+}
+
+.card-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    margin-bottom:12px;
+
+    line-height:1.5;
+
+}
+
+.card-location{
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+    margin-bottom:18px;
+
+}
+
+.card-info{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:22px;
+
+}
+
+.card-info span{
+
+    background:#f5f7fb;
+
+    color:var(--primary);
+
+    padding:8px 14px;
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.card-footer{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+}
+
+.card-price{
+
+    font-size:24px;
+
+    font-weight:800;
+
+    color:var(--secondary);
+
+}
+/* ===========================================================
+   STYLE.CSS
+   بخش ۴ از ۱۰
+=========================================================== */
+
+/* ===========================
+   FEATURES
+=========================== */
+
+.features{
+
+    background:#ffffff;
+
+}
+
+.features-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.feature-card{
+
+    background:#ffffff;
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:35px 28px;
+
+    text-align:center;
+
+    transition:var(--transition);
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow);
+
+    border-color:transparent;
+
+}
+
+.feature-icon{
+
+    width:78px;
+
+    height:78px;
+
+    margin:0 auto 22px;
+
+    border-radius:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(37,99,235,.08);
+
+    color:var(--secondary);
+
+    font-size:34px;
+
+}
+
+.feature-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    margin-bottom:14px;
+
+}
+
+.feature-text{
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+    line-height:2;
+
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+.stats-item{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.stats-number{
+
+    display:block;
+
+    font-size:42px;
+
+    font-weight:800;
+
+    color:var(--secondary);
+
+    margin-bottom:12px;
+
+}
+
+.stats-text{
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.about-image{
+
+    position:relative;
+
+}
+
+.about-image img{
+
+    border-radius:30px;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.12);
+
+}
+
+.about-content h2{
+
+    font-size:40px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.about-content p{
+
+    color:var(--text-light);
+
+    line-height:2.1;
+
+    margin-bottom:20px;
+
+}
+
+.about-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    margin-top:25px;
+
+}
+
+.about-list li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-weight:600;
+
+    color:var(--primary);
+
+}
+
+.about-list li i{
+
+    width:36px;
+
+    height:36px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:rgba(37,99,235,.1);
+
+    color:var(--secondary);
+
+}
+/* ===========================================================
+   STYLE.CSS
+   بخش ۵ از ۱۰
+=========================================================== */
+
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:24px;
+
+}
+
+.gallery-preview{
+
+    width:100%;
+
+    height:560px;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:#fff;
+
+    box-shadow:var(--shadow);
+
+}
+
+.gallery-preview img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.gallery-thumbnails{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+}
+
+.gallery-thumbnails img{
+
+    width:100%;
+
+    height:126px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    border:3px solid transparent;
+
+    transition:var(--transition);
+
+}
+
+.gallery-thumbnails img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.gallery-thumbnails img.active{
+
+    border-color:var(--secondary);
+
+}
+
+/* ===========================
+   DETAILS
+=========================== */
+
+.details-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:35px;
+
+    align-items:start;
+
+}
+
+.details-content{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.details-content h1{
+
+    font-size:36px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+    line-height:1.5;
+
+}
+
+.details-content p{
+
+    color:var(--text-light);
+
+    line-height:2.2;
+
+    margin-bottom:20px;
+
+}
+
+.details-meta{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:16px;
+
+    margin-top:25px;
+
+}
+
+.details-meta div{
+
+    background:#f8fafc;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--primary);
+
+}
+
+.details-meta strong{
+
+    color:var(--secondary);
+
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.sidebar-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.sidebar-card h3{
+
+    font-size:22px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.sidebar-price{
+
+    font-size:32px;
+
+    font-weight:800;
+
+    color:var(--secondary);
+
+    margin-bottom:25px;
+
+}
+
+.sidebar-contact{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.sidebar-contact .btn{
+
+    width:100%;
+
+}
+/* ===========================================================
+   STYLE.CSS
+   بخش ۶ از ۱۰
+=========================================================== */
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.contact{
+
+    background:#f8fafc;
+
+}
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+    align-items:start;
+
+}
+
+.contact-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.contact-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:#fff;
+
+    padding:24px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.contact-icon{
+
+    width:64px;
+
+    height:64px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:rgba(37,99,235,.1);
+
+    color:var(--secondary);
+
+    font-size:28px;
+
+    flex-shrink:0;
+
+}
+
+.contact-text h3{
+
+    font-size:20px;
+
+    color:var(--primary);
+
+    margin-bottom:6px;
+
+}
+
+.contact-text p,
+.contact-text a{
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+    line-height:1.9;
+
+}
+
+.contact-form{
+
+    background:#fff;
+
+    border-radius:28px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.contact-form h2{
+
+    font-size:30px;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+.form-group{
+
+    margin-bottom:20px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+    color:var(--primary);
+
+}
+
+.form-group input,
+
+.form-group textarea,
+
+.form-group select{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    background:#fff;
+
+    transition:var(--transition);
+
+    font-size:15px;
+
+}
+
+.form-group textarea{
+
+    resize:vertical;
+
+    min-height:170px;
+
+}
+
+.form-group input:focus,
+
+.form-group textarea:focus,
+
+.form-group select:focus{
+
+    border-color:var(--secondary);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+.contact-form button{
+
+    width:100%;
+
+}
+
+/* ===========================
+   MAP
+=========================== */
+
+.map{
+
+    margin-top:50px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+.map iframe{
+
+    width:100%;
+
+    height:420px;
+
+    border:0;
+
+    display:block;
+
+}
+/* ===========================================================
+   STYLE.CSS
+   بخش ۷ از ۱۰
+=========================================================== */
+
+/* ===========================
+   SLIDER
+=========================== */
+
+.slider{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:#fff;
+
+    box-shadow:var(--shadow);
+
+}
+
+.slider-track{
+
+    display:flex;
+
+    transition:transform .5s ease;
+
+}
+
+.slide{
+
+    min-width:100%;
+
+    position:relative;
+
+}
+
+.slide img{
+
+    width:100%;
+
+    height:520px;
+
+    object-fit:cover;
+
+}
+
+.slide-content{
+
+    position:absolute;
+
+    right:40px;
+
+    bottom:40px;
+
+    background:rgba(15,23,42,.82);
+
+    backdrop-filter:blur(12px);
+
+    color:#fff;
+
+    padding:24px 28px;
+
+    border-radius:20px;
+
+    max-width:520px;
+
+}
+
+.slide-content h2{
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+    line-height:1.5;
+
+}
+
+.slide-content p{
+
+    line-height:2;
+
+    color:rgba(255,255,255,.85);
+
+}
+
+.slider-prev,
+
+.slider-next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(255,255,255,.9);
+
+    color:var(--primary);
+
+    font-size:22px;
+
+    transition:var(--transition);
+
+    z-index:10;
+
+}
+
+.slider-prev{
+
+    left:20px;
+
+}
+
+.slider-next{
+
+    right:20px;
+
+}
+
+.slider-prev:hover,
+
+.slider-next:hover{
+
+    background:var(--secondary);
+
+    color:#fff;
+
+}
+
+.slider-dots{
+
+    position:absolute;
+
+    bottom:22px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.slider-dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.55);
+
+    transition:var(--transition);
+
+}
+
+.slider-dot.active{
+
+    width:34px;
+
+    border-radius:999px;
+
+    background:#fff;
+
+}
+
+/* ===========================
+   BADGES
+=========================== */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.badge-primary{
+
+    background:rgba(37,99,235,.1);
+
+    color:var(--secondary);
+
+}
+
+.badge-success{
+
+    background:rgba(22,163,74,.12);
+
+    color:var(--success);
+
+}
+
+.badge-warning{
+
+    background:rgba(245,158,11,.15);
+
+    color:var(--warning);
+
+}
+
+.badge-danger{
+
+    background:rgba(220,38,38,.12);
+
+    color:var(--danger);
+
+}
+/* ===========================================================
+   STYLE.CSS
+   بخش ۸ از ۱۰
+=========================================================== */
+
+/* ===========================
+   MODAL
+=========================== */
+
+.modal-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(15,23,42,.55);
+
+    backdrop-filter:blur(4px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:var(--transition);
+
+    z-index:9998;
+
+}
+
+.modal-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.modal{
+
+    position:fixed;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%) scale(.9);
+
+    width:min(92%,620px);
+
+    background:#fff;
+
+    border-radius:28px;
+
+    box-shadow:0 35px 80px rgba(0,0,0,.2);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:var(--transition);
+
+    z-index:9999;
+
+    overflow:hidden;
+
+}
+
+.modal.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translate(-50%,-50%) scale(1);
+
+}
+
+.modal-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:22px 28px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.modal-header h3{
+
+    font-size:24px;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+.modal-close{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:#f4f6f8;
+
+    color:var(--primary);
+
+    font-size:22px;
+
+    transition:var(--transition);
+
+}
+
+.modal-close:hover{
+
+    background:var(--danger);
+
+    color:#fff;
+
+}
+
+.modal-body{
+
+    padding:30px;
+
+}
+
+.modal-footer{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:15px;
+
+    padding:22px 28px;
+
+    border-top:1px solid var(--border);
+
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+
+.empty{
+
+    width:100%;
+
+    padding:70px 20px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    color:var(--text-light);
+
+    background:#fff;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ===========================
+   REVEAL ANIMATION
+=========================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ===========================
+   HOVER EFFECT
+=========================== */
+
+.hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+/* ===========================================================
+   STYLE.CSS
+   بخش ۹ از ۱۰
+=========================================================== */
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:90px 0 30px;
+
+    margin-top:100px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:40px;
+
+    margin-bottom:50px;
+
+}
+
+.footer-logo{
+
+    font-size:30px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+}
+
+.footer-logo span{
+
+    color:var(--secondary);
+
+}
+
+.footer-about{
+
+    color:rgba(255,255,255,.75);
+
+    line-height:2.1;
+
+    margin-bottom:25px;
+
+}
+
+.footer-title{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    margin-bottom:22px;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.footer-links a{
+
+    color:rgba(255,255,255,.75);
+
+    transition:var(--transition);
+
+}
+
+.footer-links a:hover{
+
+    color:#fff;
+
+    padding-right:8px;
+
+}
+
+.footer-contact{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.footer-contact li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:rgba(255,255,255,.75);
+
+}
+
+.footer-social{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-top:24px;
+
+}
+
+.footer-social a{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(255,255,255,.08);
+
+    transition:var(--transition);
+
+}
+
+.footer-social a:hover{
+
+    background:var(--secondary);
+
+    transform:translateY(-5px);
+
+}
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding-top:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-copy{
+
+    color:rgba(255,255,255,.65);
+
+    font-size:14px;
+
+}
+
+.footer-credit{
+
+    color:rgba(255,255,255,.65);
+
+    font-size:14px;
+
+}
+
+/* ===========================
+   BACK TO TOP
+=========================== */
+
+.back-to-top{
+
+    position:fixed;
+
+    left:25px;
+
+    bottom:25px;
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--secondary);
+
+    color:#fff;
+
+    font-size:22px;
+
+    box-shadow:0 18px 40px rgba(37,99,235,.3);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:var(--transition);
+
+    z-index:999;
+
+}
+
+.back-to-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.back-to-top:hover{
+
+    background:var(--secondary-hover);
+
+    transform:translateY(-6px);
+
+}
+/* ===========================================================
+   STYLE.CSS
+   بخش ۱۰ از ۱۰ (پایانی)
+=========================================================== */
+
+/* ===========================
+   UTILITIES
+=========================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-right{
+
+    text-align:right;
+
+}
+
+.text-left{
+
+    text-align:left;
+
+}
+
+.w-100{
+
+    width:100%;
+
+}
+
+.h-100{
+
+    height:100%;
+
+}
+
+.d-none{
+
+    display:none !important;
+
+}
+
+.d-flex{
+
+    display:flex;
+
+}
+
+.align-center{
+
+    align-items:center;
+
+}
+
+.justify-center{
+
+    justify-content:center;
+
+}
+
+.justify-between{
+
+    justify-content:space-between;
+
+}
+
+.flex-column{
+
+    flex-direction:column;
+
+}
+
+.flex-wrap{
+
+    flex-wrap:wrap;
+
+}
+
+.gap-10{
+
+    gap:10px;
+
+}
+
+.gap-20{
+
+    gap:20px;
+
+}
+
+.gap-30{
+
+    gap:30px;
+
+}
+
+.mt-10{
+
+    margin-top:10px;
+
+}
+
+.mt-20{
+
+    margin-top:20px;
+
+}
+
+.mt-30{
+
+    margin-top:30px;
+
+}
+
+.mt-40{
+
+    margin-top:40px;
+
+}
+
+.mt-50{
+
+    margin-top:50px;
+
+}
+
+.mb-10{
+
+    margin-bottom:10px;
+
+}
+
+.mb-20{
+
+    margin-bottom:20px;
+
+}
+
+.mb-30{
+
+    margin-bottom:30px;
+
+}
+
+.mb-40{
+
+    margin-bottom:40px;
+
+}
+
+.mb-50{
+
+    margin-bottom:50px;
+
+}
+
+.pt-50{
+
+    padding-top:50px;
+
+}
+
+.pb-50{
+
+    padding-bottom:50px;
+
+}
+
+.rounded{
+
+    border-radius:var(--radius-lg);
+
+}
+
+.shadow{
+
+    box-shadow:var(--shadow);
+
+}
+
+.shadow-hover{
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.bg-white{
+
+    background:#fff;
+
+}
+
+.bg-primary{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.bg-secondary{
+
+    background:var(--secondary);
+
+    color:#fff;
+
+}
+
+.color-primary{
+
+    color:var(--primary);
+
+}
+
+.color-secondary{
+
+    color:var(--secondary);
+
+}
+
+.color-light{
+
+    color:var(--text-light);
+
+}
+
+/* ===========================
+   SELECTION
+=========================== */
+
+::selection{
+
+    background:var(--secondary);
+
+    color:#fff;
+
+}
+
+::-moz-selection{
+
+    background:var(--secondary);
+
+    color:#fff;
+
+}
+
+/* ===========================
+   FOCUS
+=========================== */
+
+*:focus-visible{
+
+    outline:3px solid rgba(37,99,235,.25);
+
+    outline-offset:3px;
+
+}
+
+/* ===========================
+   PRINT
+=========================== */
+
+@media print{
+
+    .header,
+    .footer,
+    .back-to-top,
+    .mobile-menu,
+    .overlay,
+    .modal,
+    .modal-overlay{
+
+        display:none !important;
+
+    }
+
+    body{
+
+        background:#fff;
+
+        color:#000;
+
+    }
+
+    .card,
+    .details-content,
+    .sidebar-card{
+
+        box-shadow:none;
+
+        border:1px solid #ddd;
+
+    }
+
+}
+
+/* ===========================================================
+   END OF FILE
+=========================================================== */

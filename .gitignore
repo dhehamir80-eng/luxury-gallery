@@ -1,0 +1,19 @@
+
+# Local Supabase browser configuration
+supabase-config.js
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Node dependencies and generated files
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Local credentials
+supabase-config.js
+.env
+.env.*
+!.env.example

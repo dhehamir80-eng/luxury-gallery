@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Luxury Gallery | املاک و نمایشگاه خودرو</title>
+
+    <meta name="description"
+          content="ویترین اختصاصی املاک و خودروهای لوکس">
+
+    <link rel="icon"
+          href="favicon.ico">
+
+    <link rel="stylesheet"
+          href="css/variables.css">
+
+    <link rel="stylesheet"
+          href="css/animations.css">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/responsive.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ===========================
+     LOADER
+=========================== -->
+
+<div class="loader">
+
+    <div class="loader-circle"></div>
+
+</div>
+
+<!-- ===========================
+     MOBILE OVERLAY
+=========================== -->
+
+<div class="overlay"></div>
+
+<!-- ===========================
+     HEADER
+=========================== -->
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="index.html"
+           class="logo">
+
+            Luxury
+            <span>Gallery</span>
+
+        </a>
+
+        <nav class="desktop-menu">
+
+            <a href="index.html"
+               class="active">
+
+                خانه
+
+            </a>
+
+            <a href="properties.html">
+
+                املاک
+
+            </a>
+
+            <a href="cars.html">
+
+                خودروها
+
+            </a>
+
+            <a href="about.html">
+
+                درباره ما
+
+            </a>
+
+            <a href="contact.html">
+
+                تماس با ما
+
+            </a>
+
+        </nav>
+        
+  
+        <div class="header-action">
+
+            <a href="contact.html"
+               class="btn btn-primary">
+
+                مشاوره رایگان
+
+            </a>
+
+            <button class="mobile-menu-button">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ===========================
+     MOBILE MENU
+=========================== -->
+
+<aside class="mobile-menu">
+
+    <button class="mobile-menu-close">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+    <nav>
+
+        <a href="index.html">
+
+            خانه
+
+        </a>
+
+        <a href="properties.html">
+
+            املاک
+
+        </a>
+
+        <a href="cars.html">
+
+            خودروها
+
+        </a>
+
+        <a href="about.html">
+
+            درباره ما
+
+        </a>
+
+        <a href="contact.html">
+
+            تماس با ما
+
+        </a>
+
+    </nav>
+
+</aside>
+
+<!-- ===========================
+     HERO
+=========================== -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-text reveal">
+
+                <h1 class="hero-title">
+
+                    ویترین اختصاصی
+
+                    <span>
+
+                        املاک و خودروهای لوکس
+
+                    </span>
+
+                </h1>
+
+                <p class="hero-subtitle">
+
+                    مجموعه‌ای از بهترین فایل‌های
+                    املاک و خودرو با طراحی مدرن،
+                    تجربه‌ای مشابه اپلیکیشن و
+                    دسترسی سریع به اطلاعات.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="properties.html"
+                       class="btn btn-primary">
+
+                        مشاهده املاک
+
+                    </a>
+
+                    <a href="cars.html"
+                       class="btn btn-outline">
+
+                        مشاهده خودروها
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image reveal">
+
+                <img src="assets/images/hero/hero.jpg"
+                     alt="Luxury">
+
+                <div class="hero-badge">
+
+                    بیش از ۵۰۰ فایل ویژه
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    </section>
+    
+    <!-- ===========================
+     SEARCH
+=========================== -->
+
+<section class="search-wrapper">
+
+    <div class="container">
+
+        <div class="search-box shadow reveal">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="جستجوی ملک یا خودرو...">
+
+            <select id="typeSelect">
+
+                <option value="">
+                    نوع ملک
+                </option>
+
+                <option value="ویلا">
+                    ویلا
+                </option>
+
+                <option value="آپارتمان">
+                    آپارتمان
+                </option>
+
+            </select>
+
+            <select id="citySelect">
+
+                <option value="">
+                    شهر
+                </option>
+
+                <option value="تهران">
+                    تهران
+                </option>
+
+                <option value="کرج">
+                    کرج
+                </option>
+
+            </select>
+
+            <button
+                id="searchButton"
+                class="btn btn-primary">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                جستجو
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+     STATS
+=========================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="stats">
+
+            <div class="stats-item reveal">
+
+                <span
+                    class="stats-number"
+                    data-counter="520">
+
+                    0
+
+                </span>
+
+                <p class="stats-text">
+
+                    فایل املاک
+
+                </p>
+
+            </div>
+
+</section>
+
+            <div class="stats-item reveal">
+
+                <span
+                    class="stats-number"
+                    data-counter="185">
+
+                    0
+
+                </span>
+
+                <p class="stats-text">
+
+                    خودرو موجود
+
+                </p>
+
+            </div>
+
+            <div class="stats-item reveal">
+
+                <span
+                    class="stats-number"
+                    data-counter="950">
+
+                    0
+
+                </span>
+
+                <p class="stats-text">
+
+                    مشتری راضی
+
+                </p>
+
+            </div>
+
+            <div class="stats-item reveal">
+
+                <span
+                    class="stats-number"
+                    data-counter="12">
+
+                    0
+
+                </span>
+
+                <p class="stats-text">
+
+                    سال تجربه
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+<!-- ===========================
+     PROPERTIES
+=========================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2 class="section-title">
+
+                جدیدترین
+                <span>املاک</span>
+
+            </h2>
+
+            <p class="section-description">
+
+                منتخب بهترین فایل‌های فروش و سرمایه‌گذاری
+
+            </p>
+
+        </div>
+
+        <div
+            id="propertiesContainer"
+            class="properties-grid">
+
+        </div>
+
+    </div>
+
+
+</section>
+
+<!-- ===========================
+     CARS
+=========================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2 class="section-title">
+
+                جدیدترین
+                <span>خودروها</span>
+
+            </h2>
+
+            <p class="section-description">
+
+                خودروهای خاص، لوکس و کارشناسی شده
+
+            </p>
+
+        </div>
+
+        <div
+            id="carsContainer"
+            class="cars-grid">
+
+        </div>
+
+    </div>
+    
+    </section>
+    
+    <!-- ===========================
+     FEATURES
+=========================== -->
+
+<section class="features">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2 class="section-title">
+
+                چرا
+                <span>Luxury Gallery</span>
+
+            </h2>
+
+            <p class="section-description">
+
+                طراحی مدرن، اطلاعات کامل و تجربه‌ای شبیه اپلیکیشن برای نمایش حرفه‌ای املاک و خودروهای شما.
+
+            </p>
+
+        </div>
+
+</section>
+
+        <div class="features-grid">
+
+            <div class="feature-card reveal">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+
+                <h3 class="feature-title">
+                    املاک منتخب
+                </h3>
+
+                <p class="feature-text">
+                    نمایش حرفه‌ای فایل‌های فروش، رهن و اجاره با تصاویر باکیفیت.
+                </p>
+
+            </div>
+
+            <div class="feature-card reveal">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
+
+                <h3 class="feature-title">
+                    خودروهای لوکس
+                </h3>
+
+                <p class="feature-text">
+                    معرفی خودروها همراه با مشخصات کامل و گالری تصاویر.
+                </p>
+
+            </div>
+
+            <div class="feature-card reveal">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h3 class="feature-title">
+                    اطلاعات دقیق
+                </h3>
+
+                <p class="feature-text">
+                    ثبت جزئیات کامل برای هر فایل جهت تصمیم‌گیری سریع مشتری.
+                </p>
+
+            </div>
+
+            <div class="feature-card reveal">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <h3 class="feature-title">
+                    مشاوره سریع
+                </h3>
+
+                <p class="feature-text">
+                    ارتباط مستقیم با مشتری از طریق تماس یا پیام‌رسان‌ها.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+<!-- ===========================
+     ABOUT
+=========================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image reveal">
+
+                <img
+                    src="assets/images/backgrounds/about.jpg"
+                    alt="About">
+
+            </div>
+
+            <div class="about-content reveal">
+
+                <h2>
+
+                    ویترین اختصاصی برای
+                    املاک و خودرو
+
+                </h2>
+
+                <p>
+
+                    این وب‌سایت با هدف معرفی حرفه‌ای املاک و خودرو طراحی شده است.
+                    رابط کاربری مدرن، سرعت بالا و ظاهر مشابه اپلیکیشن باعث می‌شود
+                    کاربران تجربه‌ای روان و لذت‌بخش داشته باشند.
+
+                </p>
+
+                <ul class="about-list">
+
+                    <li>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        طراحی کاملاً مدرن
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        سرعت بارگذاری بالا
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        مناسب موبایل و دسکتاپ
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        مدیریت آسان فایل‌ها
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    /* ادامه فایل */
+
+</section>
+
+<!-- ===========================
+     FOOTER
+=========================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h2 class="footer-logo">
+
+                    Luxury
+                    <span>Gallery</span>
+
+                </h2>
+
+                <p class="footer-about">
+
+                    ویترین اختصاصی املاک و خودروهای لوکس با طراحی مدرن و
+                    تجربه‌ای مشابه اپلیکیشن.
+
+                </p>
+
+                <div class="footer-social">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <h3 class="footer-title">
+
+                    دسترسی سریع
+
+                </h3>
+
+                <div class="footer-links">
+
+                    <a href="index.html">خانه</a>
+
+                    <a href="properties.html">املاک</a>
+
+                    <a href="cars.html">خودروها</a>
+
+                    <a href="about.html">درباره ما</a>
+
+                    <a href="contact.html">تماس با ما</a>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <h3 class="footer-title">
+
+                    اطلاعات تماس
+
+                </h3>
+
+                <ul class="footer-contact">
+
+                    <li>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        +98 912 000 0000
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        info@luxurygallery.com
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        تهران، ایران
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3 class="footer-title">
+
+                    ساعات کاری
+
+                </h3>
+
+                <p class="footer-about">
+
+                    شنبه تا پنجشنبه
+
+                    <br>
+
+                    ۹ صبح تا ۹ شب
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p class="footer-copy">
+
+                © <span id="year"></span>
+
+                تمامی حقوق محفوظ است.
+
+            </p>
+
+            <p class="footer-credit">
+
+                Designed By Luxury Gallery
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- ===========================
+     BACK TO TOP
+=========================== -->
+
+<button class="back-to-top">
+
+    <i class="fa-solid fa-chevron-up"></i>
+
+</button>
+
+<!-- ===========================
+     MODAL
+=========================== -->
+
+<div class="modal-overlay"></div>
+
+<div class="modal">
+
+    <div class="modal-header">
+
+        <h3>
+
+            تماس سریع
+
+        </h3>
+
+        <button class="modal-close">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+    <div class="modal-body">
+
+        <p>
+
+            برای دریافت اطلاعات بیشتر با ما تماس بگیرید.
+
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ===========================
+     SCRIPTS
+=========================== -->
+
+<script src="js/data.js"></script>
+
+<script src="js/navigation.js"></script>
+
+<script src="js/modal.js"></script>
+
+<script src="js/search.js"></script>
+
+<script src="js/slider.js"></script>
+
+<script src="js/app.js"></script>
+
+
+</body>
+
+
+
+</html>
+

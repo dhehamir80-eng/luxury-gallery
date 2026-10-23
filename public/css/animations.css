@@ -1,0 +1,198 @@
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes fadeIn {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes fadeUp{
+    0%{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeDown{
+    0%{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeLeft{
+    0%{
+        opacity:0;
+        transform:translateX(-40px);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes fadeRight{
+    0%{
+        opacity:0;
+        transform:translateX(40px);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes zoomIn{
+    0%{
+        opacity:0;
+        transform:scale(.8);
+    }
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.05);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes rotate360{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes shimmer{
+    0%{
+        background-position:-300px 0;
+    }
+    100%{
+        background-position:300px 0;
+    }
+}
+
+@keyframes slideLeft{
+    from{
+        transform:translateX(100%);
+    }
+    to{
+        transform:translateX(0);
+    }
+}
+
+@keyframes slideRight{
+    from{
+        transform:translateX(-100%);
+    }
+    to{
+        transform:translateX(0);
+    }
+}
+
+@keyframes bounce{
+    0%,20%,50%,80%,100%{
+        transform:translateY(0);
+    }
+    40%{
+        transform:translateY(-12px);
+    }
+    60%{
+        transform:translateY(-6px);
+    }
+}
+
+@keyframes ripple{
+    0%{
+        transform:scale(.4);
+        opacity:.7;
+    }
+    100%{
+        transform:scale(2.5);
+        opacity:0;
+    }
+}
+
+.fade-in{
+    animation:fadeIn .8s ease forwards;
+}
+
+.fade-up{
+    animation:fadeUp .8s ease forwards;
+}
+
+.fade-down{
+    animation:fadeDown .8s ease forwards;
+}
+
+.fade-left{
+    animation:fadeLeft .8s ease forwards;
+}
+
+.fade-right{
+    animation:fadeRight .8s ease forwards;
+}
+
+.zoom-in{
+    animation:zoomIn .6s ease forwards;
+}
+
+.float{
+    animation:float 4s ease-in-out infinite;
+}
+
+.pulse{
+    animation:pulse 2s infinite;
+}
+
+.rotate{
+    animation:rotate360 8s linear infinite;
+}
+
+.bounce{
+    animation:bounce 2s infinite;
+}
+
+.slide-left{
+    animation:slideLeft .5s ease;
+}
+
+.slide-right{
+    animation:slideRight .5s ease;
+}

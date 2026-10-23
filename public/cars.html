@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>خودروها | Luxury Gallery</title>
+
+    <meta name="description"
+          content="نمایش خودروهای موجود">
+
+    <link rel="icon"
+          href="favicon.ico">
+
+    <link rel="stylesheet"
+          href="css/variables.css">
+
+    <link rel="stylesheet"
+          href="css/animations.css">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/responsive.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="loader">
+
+    <div class="loader-circle"></div>
+
+</div>
+
+<div class="overlay"></div>
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="index.html" class="logo">
+
+            Luxury
+            <span>Gallery</span>
+
+        </a>
+
+        <nav class="desktop-menu">
+
+            <a href="index.html">
+                خانه
+            </a>
+
+            <a href="properties.html">
+                املاک
+            </a>
+
+            <a href="cars.html"
+               class="active">
+                خودروها
+            </a>
+
+            <a href="about.html">
+                درباره ما
+            </a>
+
+            <a href="contact.html">
+                تماس با ما
+            </a>
+
+        </nav>
+
+        <div class="header-action">
+
+            <a href="contact.html"
+               class="btn btn-primary">
+
+                تماس با ما
+
+            </a>
+
+            <button class="mobile-menu-button">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<aside class="mobile-menu">
+
+    <button class="mobile-menu-close">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+    <nav>
+
+        <a href="index.html">خانه</a>
+
+        <a href="properties.html">املاک</a>
+
+        <a href="cars.html"
+           class="active">خودروها</a>
+
+        <a href="about.html">درباره ما</a>
+
+        <a href="contact.html">تماس با ما</a>
+
+    </nav>
+
+</aside>
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <h1 class="hero-title">
+
+                    نمایشگاه
+                    <span>خودرو</span>
+
+                </h1>
+
+                <p class="hero-subtitle">
+
+                    مجموعه‌ای از خودروهای صفر و کارکرده لوکس همراه با مشخصات کامل.
+
+                </p>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img
+                    src="assets/images/hero/cars.jpg"
+                    alt="Cars">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="search-wrapper">
+
+    <div class="container">
+
+        <div class="search-box">
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="جستجوی خودرو...">
+
+            <select>
+
+                <option>همه برندها</option>
+
+                <option>BMW</option>
+
+                <option>Benz</option>
+
+                <option>Toyota</option>
+
+                <option>Porsche</option>
+
+            </select>
+
+            <select>
+
+                <option>همه سال‌ها</option>
+
+                <option>2026</option>
+
+                <option>2025</option>
+
+                <option>2024</option>
+
+            </select>
+
+            <button
+                class="btn btn-primary">
+
+                جستجو
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="container">
+
+        <div
+            id="carsContainer"
+            class="cars-grid">
+
+        </div>
+
+    </div>
+    
+    <!-- ===========================
+     FOOTER
+=========================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h2 class="footer-logo">
+
+                    Luxury
+                    <span>Gallery</span>
+
+                </h2>
+
+                <p class="footer-about">
+
+                    نمایشگاه اختصاصی خودروهای لوکس و خاص با طراحی مدرن و تجربه‌ای مشابه اپلیکیشن.
+
+                </p>
+
+                <div class="footer-social">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <h3 class="footer-title">
+
+                    صفحات
+
+                </h3>
+
+                <div class="footer-links">
+
+                    <a href="index.html">خانه</a>
+
+                    <a href="properties.html">املاک</a>
+
+                    <a href="cars.html">خودروها</a>
+
+                    <a href="about.html">درباره ما</a>
+
+                    <a href="contact.html">تماس با ما</a>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <h3 class="footer-title">
+
+                    اطلاعات تماس
+
+                </h3>
+
+                <ul class="footer-contact">
+
+                    <li>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        +98 912 000 0000
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        info@luxurygallery.com
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        تهران، ایران
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3 class="footer-title">
+
+                    ساعات کاری
+
+                </h3>
+
+                <p class="footer-about">
+
+                    شنبه تا پنجشنبه
+
+                    <br>
+
+                    09:00 تا 21:00
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p class="footer-copy">
+
+                © <span id="year"></span>
+                تمامی حقوق محفوظ است.
+
+            </p>
+
+            <p class="footer-credit">
+
+                Designed By Luxury Gallery
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<button class="back-to-top">
+
+    <i class="fa-solid fa-chevron-up"></i>
+
+</button>
+
+<div class="modal-overlay"></div>
+
+<div class="modal">
+
+    <div class="modal-header">
+
+        <h3>
+
+            تماس سریع
+
+        </h3>
+
+        <button class="modal-close">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+    <div class="modal-body">
+
+        <p>
+
+            برای دریافت اطلاعات بیشتر با ما تماس بگیرید.
+
+        </p>
+
+    </div>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/search.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</section>
+</html>
+

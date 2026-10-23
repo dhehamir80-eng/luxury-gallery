@@ -1,0 +1,577 @@
+/* =====================================================
+   responsive.css
+   بخش ۱ از ۳
+===================================================== */
+
+/* =========================
+   1400px
+========================= */
+
+@media (max-width:1400px){
+
+    :root{
+        --container:1200px;
+    }
+
+}
+
+/* =========================
+   1200px
+========================= */
+
+@media (max-width:1200px){
+
+    :root{
+        --container:100%;
+    }
+
+    .container{
+        width:100%;
+        padding-left:30px;
+        padding-right:30px;
+    }
+
+    .hero-title{
+        font-size:42px;
+    }
+
+    .hero-subtitle{
+        font-size:18px;
+    }
+
+    .properties-grid,
+    .cars-grid{
+
+        grid-template-columns:
+        repeat(3,1fr);
+
+        gap:24px;
+
+    }
+
+    .features-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+    .section-title{
+
+        font-size:34px;
+
+    }
+
+}
+
+/* =========================
+   992px
+========================= */
+
+@media (max-width:992px){
+
+    .desktop-menu{
+
+        display:none;
+
+    }
+
+    .mobile-menu-button{
+
+        display:flex;
+
+    }
+
+    .hero{
+
+        min-height:auto;
+
+        padding-top:120px;
+
+        padding-bottom:80px;
+
+    }
+
+    .hero-content{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+        text-align:center;
+
+    }
+
+    .hero-image{
+
+        order:-1;
+
+    }
+
+    .hero-title{
+
+        font-size:38px;
+
+    }
+
+    .search-box{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .search-box input,
+    .search-box select,
+    .search-box button{
+
+        width:100%;
+
+    }
+
+    .properties-grid,
+    .cars-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+    .about-grid{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+    .details-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .stats{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+/* =====================================================
+   responsive.css
+   بخش ۲ از ۳
+===================================================== */
+
+/* =========================
+   768px
+========================= */
+
+@media (max-width:768px){
+
+    :root{
+
+        --header-height:70px;
+
+        --fs-48:36px;
+        --fs-40:30px;
+        --fs-32:28px;
+        --fs-28:24px;
+        --fs-24:22px;
+        --fs-20:18px;
+
+    }
+
+    section{
+
+        padding:70px 0;
+
+    }
+
+    .container{
+
+        padding-left:20px;
+        padding-right:20px;
+
+    }
+
+    .header{
+
+        height:70px;
+
+    }
+
+    .logo{
+
+        font-size:22px;
+
+    }
+
+    .hero{
+
+        padding-top:100px;
+        padding-bottom:60px;
+
+    }
+
+    .hero-title{
+
+        font-size:32px;
+        line-height:1.4;
+
+    }
+
+    .hero-subtitle{
+
+        font-size:16px;
+        line-height:1.9;
+
+    }
+
+    .hero-buttons{
+
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+
+    }
+
+    .hero-buttons .btn{
+
+        width:100%;
+
+    }
+
+    .section-title{
+
+        font-size:28px;
+
+    }
+
+    .section-description{
+
+        font-size:15px;
+
+    }
+
+    .properties-grid,
+    .cars-grid,
+    .features-grid,
+    .stats,
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .card{
+
+        border-radius:20px;
+
+    }
+
+    .card-image{
+
+        height:220px;
+
+    }
+
+    .gallery{
+
+        gap:15px;
+
+    }
+
+    .gallery img{
+
+        border-radius:18px;
+
+    }
+
+    .contact-form{
+
+        padding:25px;
+
+    }
+
+    .about-image{
+
+        margin-bottom:20px;
+
+    }
+
+    .filters{
+
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+
+    }
+
+    .filters select,
+    .filters input,
+    .filters button{
+
+        width:100%;
+
+    }
+
+    table{
+
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+
+    }
+
+    iframe{
+
+        height:300px;
+
+    }
+
+}
+/* =====================================================
+   responsive.css
+   بخش ۳ از ۳ (پایانی)
+===================================================== */
+
+/* =========================
+   576px
+========================= */
+
+@media (max-width:576px){
+
+    .container{
+
+        padding-left:15px;
+        padding-right:15px;
+
+    }
+
+    .hero{
+
+        padding-top:90px;
+        padding-bottom:50px;
+
+    }
+
+    .hero-title{
+
+        font-size:28px;
+
+    }
+
+    .hero-subtitle{
+
+        font-size:15px;
+
+    }
+
+    .section-title{
+
+        font-size:24px;
+
+    }
+
+    .section-description{
+
+        font-size:14px;
+
+    }
+
+    .card-image{
+
+        height:200px;
+
+    }
+
+    .card-body{
+
+        padding:18px;
+
+    }
+
+    .card-title{
+
+        font-size:18px;
+
+    }
+
+    .card-price{
+
+        font-size:20px;
+
+    }
+
+    .btn{
+
+        width:100%;
+        justify-content:center;
+
+    }
+
+    .stats-item{
+
+        padding:20px;
+
+    }
+
+    .stats-number{
+
+        font-size:28px;
+
+    }
+
+    .footer{
+
+        text-align:center;
+
+    }
+
+    .footer-social{
+
+        justify-content:center;
+
+    }
+
+    .modal{
+
+        width:95%;
+        border-radius:20px;
+
+    }
+
+    .modal-body{
+
+        padding:20px;
+
+    }
+
+}
+
+/* =========================
+   400px
+========================= */
+
+@media (max-width:400px){
+
+    .hero-title{
+
+        font-size:24px;
+
+    }
+
+    .logo{
+
+        font-size:20px;
+
+    }
+
+    .card-image{
+
+        height:180px;
+
+    }
+
+    .card-body{
+
+        padding:15px;
+
+    }
+
+    .section-title{
+
+        font-size:22px;
+
+    }
+
+    .stats-number{
+
+        font-size:24px;
+
+    }
+
+}
+
+/* =========================
+   Landscape Phones
+========================= */
+
+@media (max-height:500px) and (orientation:landscape){
+
+    .hero{
+
+        min-height:auto;
+        padding-top:100px;
+        padding-bottom:60px;
+
+    }
+
+    .mobile-menu{
+
+        overflow-y:auto;
+
+    }
+
+}
+
+/* =========================
+   Large Screens
+========================= */
+
+@media (min-width:1600px){
+
+    .container{
+
+        max-width:1500px;
+
+    }
+
+    .hero-title{
+
+        font-size:56px;
+
+    }
+
+    .section-title{
+
+        font-size:42px;
+
+    }
+
+    .properties-grid,
+    .cars-grid{
+
+        grid-template-columns:repeat(4,1fr);
+
+    }
+
+}
+
+/* =========================
+   End Of File
+========================= */
